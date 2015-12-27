@@ -1,0 +1,44 @@
+/* DEFAULT */
+body {
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+
+h2 {
+	margin-bottom: 10px;
+}
+
+/*MAIN*/
+.container {
+	max-width: 960px;
+}
+
+/*HEADER*/
+.title {
+	font-size: 28px;
+	font-family: "Roboto";
+	font-weight: 700;
+	color: orange;
+	border: 1px solid skyblue;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+/*ALL PAGES*/
+.new {
+	line-height: 30px;
+}
+
+.name {
+	font-size: 18px;
+}
+
+.avatar {
+	max-height: 33px;
+}

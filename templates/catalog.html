@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-6 padding-none">
+			<h2>Categories</h2>
+		</div>
+		<div class="col-md-4 text-right new">
+			<a href="{{url_for('newCategory')}}">Add a new category</a>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+	<div class = 'flash'>
+		{% with messages = get_flashed_messages() %}
+      	{% if messages %}
+        <ul>
+        	{% for message in messages %}
+            	<li> <strong> {{ message }} </strong> </li>
+        	{% endfor %}
+        </ul>
+        {% endif %}
+    	{% endwith %}
+	</div>
+
+	{% for category in categories %}
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				<a href = "{{url_for('showItems', category_id = category.id)}}">
+					<h3>{{category.name}}</h3>
+				</a>
+			</div>
+			<div class="col-md-1 text-right">
+				<a href="{{url_for('editCategory', category_id = category.id)}}">Edit</a>
+			</div>
+			<div class="col-md-1 text-right">
+				<a href="{{url_for('deleteCategory', category_id = category.id)}}">Delete</a>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	{% endfor %}
+{% endblock %}
