@@ -9,7 +9,8 @@ iii. http://ec2-52-33-224-137.us-west-2.compute.amazonaws.com
 
 iv. A summary of software you installed and configuration changes made.
 
-v.  - http://askubuntu.com/
+v.  
+    - http://askubuntu.com/
 
     - https://www.google.co.uk
     
