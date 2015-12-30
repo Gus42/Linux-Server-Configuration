@@ -60,10 +60,15 @@ And create the ssh to allow the remote login of grader
 set port 2200 and PermitRootLogin no
 ###Configure the Uncomplicated Firewall:
 `ufw default deny incoming`
+
 `ufw default allow outgoing`
+
 `ufw allow 2200/tcp`
+
 `ufw allow 80/tcp`
+
 `ufw allow 123/udp`
+
 `ufw enable`
 ###Configure the local timezone to UTC:
 It was alredy set to UTC, typing `date` -> Wed Dec 30 12:55:43 UTC 2015
@@ -111,7 +116,9 @@ application.secret_key = 'asdeggio'
 Install and `git config --global user.name "Gus42"` and `git config --global user.email "gus815@gmail.com"`
 `git clone https://github.com/Gus42/Linux-Server-Configuration.git` and move to directory /var/www/catalog/catalog/
 in /var/www/catalog `nano .htaccess` and paste "RedirectMatch 404 /\.git"
+
 For the oauth of google: in the dev console, per this app, in credits, in js origins insert http://52.33.224.137 and http://ec2-52-33-224-137.us-west-2.compute.amazonaws.com end for the redirect uri insert http://ec2-52-33-224-137.us-west-2.compute.amazonaws.com/oauth2callback
+
 For the oauth of facebook: insert for the app url: http://52.33.224.137
 then:
 `service apache2 restart`
