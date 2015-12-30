@@ -70,7 +70,8 @@ It was alredy set to UTC, typing `date` -> Wed Dec 30 12:55:43 UTC 2015
 ###Install and configure Apache to serve a Python mod_wsgi application:
 Install Apache and mod_wsgi
 `nano /etc/apache2/sites-available/catalog.conf` and paste:
-```<VirtualHost *:80>
+```
+<VirtualHost *:80>
       ServerName 52.33.224.137
       ServerAdmin admin@52.33.224.137
       ServerAlias ec2-52-33-224-137.us-west-2.compute.amazonaws.com
@@ -87,10 +88,12 @@ Install Apache and mod_wsgi
       ErrorLog ${APACHE_LOG_DIR}/error.log
       LogLevel warn
       CustomLog ${APACHE_LOG_DIR}/access.log combined
-  </VirtualHost>```
+  </VirtualHost>
+```
 
 `a2ensite catalog`
 in /var/www/catalog `nano catalog.wsgi` and paste:
+```
 #!/usr/bin/python
 import sys
 import logging
@@ -98,6 +101,7 @@ logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0,"/var/www/catalog/")
 from catalog import app as application
 application.secret_key = 'asdeggio'
+```
 
 `service apache2 restart`
 ###Install and configure PostgreSQL:
