@@ -1,31 +1,48 @@
 # Linux-Server-Configuration
 Udacity P5, Full Stack - Configure a Server with Linux
 
-i. The IP address: 52.33.224.137 
+#i. 
+The IP address: 52.33.224.137 
 
-ii. SSH port: 2200
+#ii. 
+SSH port: 2200
 
-iii. http://52.33.224.137 ot http://ec2-52-33-224-137.us-west-2.compute.amazonaws.com
+#iii. 
+http://52.33.224.137 ot http://ec2-52-33-224-137.us-west-2.compute.amazonaws.com
 
-iv. 
-SW Intsalled:
+#iv. 
+##SW Intsalled:
 -apt-get apache2
+
 -apt-get install libapache2-mod-wsgi
+
 -apt-get install postgresql
+
 -apt-get install git
+
 -apt-get install libapache2-mod-wsgi python-dev
+
 -apt-get install python-pip
+
 -apt-get install python-psycopg2
+
 -apt-get install libpq-dev python-dev
+
 -pip install virtualenv
+
 -pip install Flask
+
 -pip install httplib2
+
 -pip install oauth2client
+
 -pip install werkzeug==0.8.3 //theese last three fixed a problem with the google sign-in
+
 -pip install flask==0.9
+
 -pip install Flask-Login==0.1.3
 
-
+## Main commands and changes
 ###Create a new user named grader: 
 add user grader
 
@@ -47,7 +64,7 @@ It was alredy set to UTC, typing date -> Wed Dec 30 12:55:43 UTC 2015
 ###Install git, clone and setup your Catalog App project:
 
 
-v.  
+#v.  
 
 - http://askubuntu.com/
 
